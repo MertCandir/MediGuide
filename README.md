@@ -1,70 +1,90 @@
-# MediGuide - Akıllı Beslenme Asistanı (Smart Nutrition Assistant)
+# Proje Adı: MediGuide - Akıllı Beslenme Asistanı
 
-🩺 **MediGuide**, bireylerin kronik rahatsızlıklarına (Diyabet, Hipertansiyon, Çölyak vb.) veya anlık yaşadıkları semptomlara (Baş Ağrısı, Mide Bulantısı vb.) göre kişiselleştirilmiş beslenme önerileri, güvenli gıda listeleri ve özel öğün planları sunan yapay zekâ destekli modern bir sağlık prototipidir.
-
-Bu proje, **PP214- Programlamada Yeni Eğilimler** & **BTE208- Bilgisayar Teknolojilerinde Güncel Trendler** dersi final projesi kapsamında geliştirilmiştir.
-
----
-
-## 1. Proje Özeti
-
-### Çözülen Problem
-Kronik rahatsızlıkları olan veya geçici semptomlar yaşayan hastalar, internet ortamındaki bilgi kirliliği nedeniyle neyi yiyip neyi yememeleri gerektiği konusunda kafa karışıklığı yaşamaktadır. Hatalı gıda tercihleri semptomları şiddetlendirebilmekte veya klinik durumları olumsuz etkileyebilmektedir.
-
-### Hedef Kullanıcı Kitlesi
-- Düzenli beslenmesi ve kan değerlerini kontrol altında tutması gereken kronik hastalar (Diyabet, Çölyak, Tansiyon hastaları vb.).
-- Günlük yaşamlarında ani gelişen rahatsızlıklara (baş ağrısı, mide yanması vb.) karşı ilaçsız, doğal gıda çözümleri arayan bireyler.
-
-### Temel Değer Önerisi
-Kullanıcının o anki klinik durumuna göre anında güncellenen **dinamik beslenme profili**, risk oranlarını gösteren **Sağlık Etki Skoru** ve tariflerde değişiklik yapmaya imkan tanıyan **Yapay Zekâ Destekli Beslenme Asistanı** ile güvenilir ve bilimsel bir rehber sunmasıdır.
+**Öğrenci Bilgileri:**
+- **Adı Soyadı:** Mert Çandır
+- **Öğrenci Numarası:** 24010501007
+- **Ders:** Programlamada Yeni Eğilimler 
 
 ---
 
-## 2. Kullanılan AI Araçları
+## 1. Projenin Amacı ve Kısa Açıklaması
 
-Projenin fikir aşamasından kodlama ve prototipleme sürecine kadar aşağıdaki yapay zekâ araçlarından bir üretim ortağı olarak yararlanılmıştır:
+**Projenin Amacı:**
+Kronik rahatsızlıkları (Diyabet, Hipertansiyon, Çölyak vb.) veya ani gelişen semptomları (Baş Ağrısı, Mide Bulantısı vb.) olan bireylerin, internetteki bilgi kirliliği arasında kaybolmadan neyi yiyip neyi yememeleri gerektiğini bulmalarını sağlamak; hatalı beslenmekten kaynaklanan sağlık risklerini en aza indirmektir.
 
-- **Arayüz Tasarımı & Akış**: Google Stitch (Mockup üretimi ve ekran taslağı bileşimi).
-- **Stil & Tasarım Sistemi**: Gemini Image & DALL·E 3 (Görsel konsept üretimi ve renk paleti seçimi).
-- **Kod Üretimi**: Antigravity IDE (Gemini 3.5 Flash) & Cursor (HTML/CSS/JS kod yapısının kurgulanması, SPA router tasarımı ve dinamik render motoru geliştirme).
-- **Veri & İçerik Üretimi**: Claude 3.5 Sonnet & GPT-4o (Tıbbi açıdan doğru gıda listelerinin, öğün detaylarının ve AI asistan yanıt kurallarının hazırlanması).
-
----
-
-## 3. Prompt Kütüphanesi
-
-Proje geliştirilirken kullanılan en başarılı prompt örnekleri ve detayları ayrıntılı olarak [PROMPT_LOGBOOK.md](file:///c:/Users/MyPc/OneDrive/Masaüstü/AntiGravity/PROMPT_LOGBOOK.md) dosyasında belgelenmiştir. İşte öne çıkan bazı örnekler:
-
-- **UI Tasarım Promptu**: `"UI mockup design for a health assistant app called MediGuide. Clean layout with huge border-radii (24px), soft ambient blue shadows, heavy whitespace. Modern Corporate style."`
-- **JS Router Promptu**: `"HTML'de section elemanlarını sayfa yenilenmeden gösterip gizleyecek hafif bir SPA router kodla. Navigasyon için history stack yönetimi yap ve logo tıklandığında tüm verileri sıfırla."`
-- **AI Asistan Mantığı Promptu**: `"Seçili sağlık durumuna (Diyabet, Çölyak vb.) göre kullanıcının besin değişiklikleri hakkındaki sorularına tıbbi olarak tutarlı ve kişiselleştirilmiş Türkçe yanıtlar üreten bir kural eşleme fonksiyonu yaz."`
+**Kısa Açıklama:**
+MediGuide, kullanıcının seçtiği veya yazdığı sağlık durumuna göre dinamik olarak güncellenen *Yenilebilir Gıdalar* listesi, *Kaçınılması Gereken Gıdalar* ve klinik etki skoru analizi ile kişiselleştirilmiş öğün planı sunan yapay zekâ (Google Gemini & Groq AI) destekli modern bir web uygulamasıdır.
 
 ---
 
-## 4. Kurulum ve Çalıştırma
+## 2. Kullanılan Teknolojiler ve Kütüphaneler
 
-Proje, herhangi bir harici kütüphane veya paket yüklemesi (npm install vb.) gerektirmeden doğrudan tarayıcı üzerinde çalışacak şekilde optimize edilmiştir. Bu sayede kurulum veya bağımlılık hataları olmadan kolayca değerlendirilebilir.
+Bu proje, maksimum hız ve esneklik için harici bir bağımlılık yükleyicisi kullanılmadan geliştirilmiştir:
 
-### Yerel Ortamda Çalıştırma Adımları
-
-#### Yöntem 1: Doğrudan Açma (Offline)
-1. Proje dosyalarını bilgisayarınıza indirin veya klonlayın.
-2. [Web](file:///c:/Users/MyPc/OneDrive/Masaüstü/AntiGravity/Web) klasörüne gidin.
-3. [index.html](file:///c:/Users/MyPc/OneDrive/Masaüstü/AntiGravity/Web/index.html) dosyasına çift tıklayarak herhangi bir modern web tarayıcısında (Chrome, Edge, Safari vb.) çalıştırın.
-
-#### Yöntem 2: Yerel Geliştirme Sunucusu (Önerilen)
-Eğer VS Code kullanıyorsanız, daha iyi bir performans ve statik dosya yönetimi için `Live Server` eklentisini kullanabilirsiniz:
-1. Proje klasörünü VS Code veya Antigravity ile açın.
-2. Sağ alt köşedeki **Go Live** butonuna tıklayarak yerel sunucuyu (`http://127.0.0.1:5500/Web/index.html`) başlatın.
+- **HTML5 & Vanilla CSS3:** Semantik yapı, duyarlı (responsive) Flex/Grid tasarımları ve özel tasarım sistemi (glassmorphism, modern tipografi).
+- **Vanilla JavaScript (ES6+):** Tek Sayfa Uygulaması (SPA) yönlendirmesi, local storage durum yönetimi ve dinamik veri işleme.
+- **Yapay Zekâ Servisleri:**
+  - **Google Gemini AI:** Kullanıcının serbest metinle girdiği hastalık veya semptomları doğal dil işleme ile analiz edip doğru kategoriye eşlemek için.
+  - **Groq API (Llama 3.3 70B):** Kullanıcılara yemek tariflerini evdeki malzemelere göre uyarlama konusunda anlık yanıtlar veren akıllı sohbet asistanı için.
 
 ---
 
-## 5. Gelecek Vizyonu
+## 3. Proje Klasör Yapısı
 
-Gelecekte **MediGuide** uygulamasına eklenebilecek yapay zekâ destekli özellikler ve ölçeklenme stratejileri:
+```text
+AntiGravity/
+├── Web/
+│   ├── index.html       # Ana uygulama arayüzü (tüm ekran modülleri)
+│   ├── style.css        # Tasarım sistemi, animasyonlar ve stil kuralları
+│   ├── app.js           # SPA yönlendiricisi, AI bağlantıları ve iş mantığı
+│   └── data.js          # Hastalıklara özel detaylı besin veritabanı
+├── README.md            # GitHub proje dokümantasyon dosyası
+└── PROMPT_LOGBOOK.md    # Geliştirme aşamasında yapay zekâya verilen promptlar
+```
 
-1. **Gelişmiş AI Entegrasyonu (Tamamlandı)**: Başlangıçta simüle edilen AI asistan yapısı, projenin final aşamasında **Groq API (Llama 3.3 70B)** entegre edilerek gerçek zamanlı, serbest metinli ve Türkçe konuşan bir beslenme asistanına dönüştürülmüştür.
-2. **Sesli Asistan Desteği (Gelecek Vizyonu)**: Hastaların klavye kullanmadan sesli komutlarla hastalıklarını belirtip tarif sorabilecekleri bir Ses-Metin (Speech-to-Text) özelliği eklenebilir.
-2. **Kamera ile İçerik / Barkod Okuma**: Kullanıcılar market alışverişi yaparken gıda ambalajının fotoğrafını çekerek veya barkodunu taratarak, ürünün seçtikleri hastalık için riskli olup olmadığını (OCR ve Vision AI ile) anında görebilirler.
-3. **Giyilebilir Cihaz Entegrasyonu**: Akıllı saatlerden gelen anlık kan şekeri, nabız ve tansiyon verileri otomatik olarak çekilerek, o anki duruma göre dinamik besin ve su hatırlatmaları yapılabilir.
-4. **Kişisel Sağlık Raporu PDF Çıktısı**: Kullanıcının 30 günlük beslenme takibi ve vücut reaksiyonları analiz edilerek, doktor randevusu öncesi hekime sunulabilecek detaylı bir "Metabolik Durum Analiz Raporu" oluşturulabilir.
+---
+
+## 4. Kurulum Adımları
+
+Uygulama herhangi bir paket kurulumu (npm install vb.) veya derleme süreci gerektirmez.
+
+1. Projeyi GitHub üzerinden bilgisayarınıza **ZIP olarak indirin** veya Git ile klonlayın:
+   ```bash
+   git clone [GITHUB_PROJE_LINKINIZ]
+   ```
+2. Arşiv dosyasını klasöre çıkartın.
+3. Çıkan klasörün içerisindeki `Web` dizinine gidin.
+
+---
+
+## 5. Çalıştırma ve Kullanım Talimatları
+
+### Çalıştırma:
+- **Doğrudan Açma:** `Web` klasörü içindeki `index.html` dosyasına çift tıklayarak herhangi bir tarayıcıda (Chrome, Edge, Safari) hemen çalıştırabilirsiniz.
+- **Geliştirici Sunucusu (Önerilen):** VS Code kullanıyorsanız `Live Server` eklentisi ile `index.html` dosyasını sağ tıklayıp "Open with Live Server" seçeneğiyle açabilirsiniz.
+
+### Kullanım Talimatları:
+1. **Ana Sayfa:** Karşınıza çıkan ekrandan "Kronik Hastalık" veya "Anlık Rahatsızlık" kartlarından birini seçin.
+2. **AI Semptom Girişi:** Yaşadığınız durumu serbestçe yazın (Örn: *"Baş Ağrısı"* veya *"Şeker hastasılığı"*). Yapay zekâ durumunuzu saniyeler içinde algılayacaktır.
+3. **Kategori Rehberi:** Sizin için hazırlanan özel panodan:
+   - **Yenilebilir Gıdalar:** Güvenle tüketebileceğiniz besinleri görün.
+   - **Kaçınılması Gerekenler:** Riskli gıdaları ve grafikli "Sağlık Etki Skoru"nu inceleyin.
+   - **Öğün Tavsiyesi:** Hastalığınıza özel dengelenmiş örnek tarifi ve besin değerlerini alın.
+4. **AI Asistanı:** Tarif sayfasındaki asistana yemeği modifiye etmek için sorular sorabilirsiniz.
+
+---
+
+
+## 6. GitHub Proje Bağlantısı
+
+🔗 **GitHub Repo Bağlantısı:** [https://github.com/MertCandir/MediGuide](https://github.com/MertCandir/MediGuide)
+
+
+---
+
+## 7. Kaynakça ve Yararlanılan Bağlantılar
+
+- **Google Gemini API Dokümantasyonu:** [https://ai.google.dev/](https://ai.google.dev/)
+- **Groq Cloud API Dokümantasyonu:** [https://console.groq.com/docs/quickstart](https://console.groq.com/docs/quickstart)
+- **Beslenme Referansları:** Harvard Health Publishing Nutrition Guidelines, T.C. Sağlık Bakanlığı Beslenme Rehberi.
+- **Tasarım Referansları:** Glassmorphism UI Best Practices.
